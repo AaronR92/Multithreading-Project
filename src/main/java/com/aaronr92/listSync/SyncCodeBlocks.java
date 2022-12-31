@@ -1,9 +1,12 @@
-package com.aaronr92;
+package com.aaronr92.listSync;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+/**
+ * Does the same thing as SyncList.java class
+ */
 public class SyncCodeBlocks {
     private static List<Integer> l1 = new ArrayList<>();
     private static List<Integer> l2 = new ArrayList<>();
