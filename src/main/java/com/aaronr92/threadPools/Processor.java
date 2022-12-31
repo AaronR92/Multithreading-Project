@@ -3,7 +3,7 @@ package com.aaronr92.threadPools;
 import java.time.LocalDateTime;
 import java.util.Date;
 
-public class Processor implements Runnable {
+class Processor implements Runnable {
     private int id;
     Processor(int id) {
         this.id = id;
