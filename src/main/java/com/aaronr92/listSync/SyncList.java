@@ -21,7 +21,7 @@ public class SyncList {
         }
         l1.add(random.nextInt(1000));
     }
-    private synchronized static void operationTwo() {
+    private static void operationTwo() {
         try {
             Thread.sleep(1);
         } catch (InterruptedException e) {
