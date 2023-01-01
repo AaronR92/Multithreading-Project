@@ -28,7 +28,7 @@ public class Util {
         }
     }
 
-    public static class Producer extends Thread {
+    static class Producer extends Thread {
         @Override
         public void run() {
             try {
@@ -39,7 +39,7 @@ public class Util {
         }
     }
 
-    public static class Consumer extends Thread {
+    static class Consumer extends Thread {
         @Override
         public void run() {
             try {
@@ -50,7 +50,7 @@ public class Util {
         }
     }
 
-    public static class QueueGetter extends Thread {
+    static class QueueGetter extends Thread {
         @Override
         public void run() {
             try {
