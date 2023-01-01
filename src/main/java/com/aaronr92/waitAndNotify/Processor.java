@@ -19,8 +19,14 @@ public class Processor {
         synchronized (this) {
             System.out.println("Waiting for return key...");
             scanner.nextLine();
+            /*
+            Will wake up after exiting this synchronized
+            body. Lock needs to be released. Execution of producer
+            will start after Thread.sleep() here.
+             */
             notify();
             System.out.println("Thread notified");
+            Thread.sleep(2000);
         }
     }
 }
