@@ -3,7 +3,7 @@ package com.aaronr92.waitAndNotify;
 import java.util.Scanner;
 
 public class Processor {
-    private Scanner scanner = new Scanner(System.in);
+    private final Scanner scanner = new Scanner(System.in);
     public void produce() throws InterruptedException {
         synchronized (this) {
             System.out.printf("%s is running...%n",
@@ -27,6 +27,7 @@ public class Processor {
             notify();
             System.out.println("Thread notified");
             Thread.sleep(2000);
+            System.out.println("Consumed!");
         }
     }
 }

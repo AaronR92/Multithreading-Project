@@ -2,15 +2,15 @@ package com.aaronr92.deadlock;
 
 public class Deadlock {
     public static void main(String[] args) throws InterruptedException {
-        Runner runner = new Runner();
-        Thread t1 = new Thread(() -> {
+        final Runner runner = new Runner();
+        final Thread t1 = new Thread(() -> {
             try {
                 runner.firstThread();
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
         });
-        Thread t2 = new Thread(() -> {
+        final Thread t2 = new Thread(() -> {
             try {
                 runner.secondThread();
             } catch (InterruptedException e) {
